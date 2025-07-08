@@ -32,7 +32,7 @@ import{initializeApp as j}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-gray-800">
         <div class="space-y-4">
           <div class="flex items-center space-x-2">
-            <img src="/DIA.png" alt="Logo Perusahaan" class="h-8 w-8">
+            <img src="/myPortfolio/DIA.png" alt="Logo Perusahaan" class="h-8 w-8">
             <span class="text-xl font-semibold text-gray-900">Dimas Ismawan Abdullah</span>
           </div>
           <p class="text-sm leading-relaxed">
