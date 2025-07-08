@@ -1,33 +1,33 @@
-import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";import{getAuth as L,onAuthStateChanged as M,signInWithEmailAndPassword as B,createUserWithEmailAndPassword as E}from"https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";import{getFirestore as A,doc as C,collection as p,query as b,orderBy as v,onSnapshot as g,setDoc as I,serverTimestamp as f,addDoc as y}from"https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))a(t);new MutationObserver(t=>{for(const i of t)if(i.type==="childList")for(const l of i.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&a(l)}).observe(document,{childList:!0,subtree:!0});function n(t){const i={};return t.integrity&&(i.integrity=t.integrity),t.referrerPolicy&&(i.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?i.credentials="include":t.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function a(t){if(t.ep)return;t.ep=!0;const i=n(t);fetch(t.href,i)}})();function T(){return setTimeout(()=>{const e=document.getElementById("mobile-menu-button"),s=document.getElementById("mobile-menu");e&&s&&e.addEventListener("click",()=>{s.classList.toggle("hidden")})},0),`
-        <nav class="bg-white border-b border-purple-600">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16 items-center">
-                    <div class="flex items-center space-x-2">
-                        <img src="/DIA.png" alt="Logo Perusahaan" class="h-8 w-8">
-                        <span class="text-xl font-semibold text-gray-900">Portfolio</span>
-                    </div>
+import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";import{getAuth as L,onAuthStateChanged as M,signInWithEmailAndPassword as B,createUserWithEmailAndPassword as E}from"https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";import{getFirestore as A,doc as $,collection as p,query as b,orderBy as v,onSnapshot as g,setDoc as C,serverTimestamp as f,addDoc as y}from"https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))a(t);new MutationObserver(t=>{for(const i of t)if(i.type==="childList")for(const l of i.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&a(l)}).observe(document,{childList:!0,subtree:!0});function n(t){const i={};return t.integrity&&(i.integrity=t.integrity),t.referrerPolicy&&(i.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?i.credentials="include":t.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function a(t){if(t.ep)return;t.ep=!0;const i=n(t);fetch(t.href,i)}})();function I(){return setTimeout(()=>{const e=document.getElementById("mobile-menu-button"),s=document.getElementById("mobile-menu");e&&s&&e.addEventListener("click",()=>{s.classList.toggle("hidden")})},0),`
+    <nav class="bg-white border-b border-purple-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex items-center space-x-2">
+            <img src="/myPortfolio/DIA.png" alt="Logo Perusahaan" class="h-8 w-8">
+            <span class="text-xl font-semibold text-gray-900">Portfolio</span>
+          </div>
 
-                    <div class="hidden md:flex space-x-6">
-                        <a href="#/portfolio" class="text-gray-700 hover:text-purple-600 font-medium">Home</a>
-                        <a href="#/portfolio/project" class="text-gray-700 hover:text-purple-600 font-medium">Project</a>
-                        <a href="#/forums" class="text-gray-700 hover:text-purple-600 font-medium">Contact</a>
-                    </div>
+          <div class="hidden md:flex space-x-6">
+            <a href="#/portfolio" class="text-gray-700 hover:text-purple-600 font-medium">Home</a>
+            <a href="#/portfolio/project" class="text-gray-700 hover:text-purple-600 font-medium">Project</a>
+            <a href="#/forums" class="text-gray-700 hover:text-purple-600 font-medium">Contact</a>
+          </div>
 
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" class="text-gray-700 hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        <i class="fas fa-bars text-xl"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-700 hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
 
-            <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-                <a href="#/portfolio" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
-                <a href="#/portfolio/project" class="block py-2 text-gray-700 hover:text-purple-600">Project</a>
-                <a href="#/forums" class="block py-2 text-gray-700 hover:text-purple-600">Contact</a>
-            </div>
-        </nav>
-    `}function H(){return`
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <a href="#/portfolio" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
+        <a href="#/portfolio/project" class="block py-2 text-gray-700 hover:text-purple-600">Project</a>
+        <a href="#/forums" class="block py-2 text-gray-700 hover:text-purple-600">Contact</a>
+      </div>
+    </nav>
+  `}function T(){return`
     <footer class="bg-white border-t border-purple-600 py-12 px-6">
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-gray-800">
         <div class="space-y-4">
@@ -95,17 +95,17 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
         © 2024 Dimas Ismawan Abdullah, Inc. All rights reserved.
       </div>
     </footer>
-  `}function $(e){return`
+  `}function H(e){return`
         <header>
-            ${T()}
+            ${I()}
         </header>
         <main>
             ${e}
         </main>
         <footer>
-            ${H()}
+            ${T()}
         </footer>
-    `}function D(){return setTimeout(()=>{const e=document.getElementById("lottie-animation");e&&lottie.loadAnimation({container:e,renderer:"svg",loop:!0,autoplay:!0,path:"/animation.json"})},0),`
+    `}function D(){return setTimeout(()=>{const e=document.getElementById("lottie-animation");e&&lottie.loadAnimation({container:e,renderer:"svg",loop:!0,autoplay:!0,path:"/myPortfolio/animation.json"})},0),`
     <section class="relative min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 text-gray-800 flex flex-col-reverse md:flex-row items-center justify-center px-6 py-12 overflow-hidden">
         <div class="absolute -top-20 -left-20 w-[500px] h-[500px] opacity-10 z-0 pointer-events-none">
             <img src="/bg-blur.svg" alt="Decorative Blur" class="w-full h-full object-cover">
@@ -155,7 +155,7 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
 
     <div class="flex justify-center md:justify-end">
       <div class="relative w-72 h-85 rounded-3xl overflow-hidden shadow-2xl border-4 border-purple-300 hover:scale-105 transition-transform duration-300">
-        <img src="/dimas.png" alt="Foto Dimas" class="object-cover w-full h-full">  
+        <img src="/myPortfolio/dimas.png" alt="Foto Dimas" class="object-cover w-full h-full">  
         <div class="absolute -inset-1 rounded-3xl bg-gradient-to-br from-purple-300 to-pink-300 blur-2xl opacity-30 -z-10"></div>
       </div>
     </div>
@@ -204,10 +204,10 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
       </div>
 
       <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
-        ${o("fab fa-html5","HTML")}
-        ${o("fab fa-css3-alt","CSS")}
-        ${o("fab fa-js","JavaScript")}
-        ${o(`
+        ${r("fab fa-html5","HTML")}
+        ${r("fab fa-css3-alt","CSS")}
+        ${r("fab fa-js","JavaScript")}
+        ${r(`
   <div class="text-purple-600">
     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48" fill="currentColor">
       <path d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 
@@ -221,17 +221,17 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
         C20.672,26.764,17.949,24,12,24z"/>
     </svg>
   </div>`,"Tailwind",!0)}
-        ${o("fab fa-bootstrap","Bootstrap")}
-        ${o("fab fa-php","PHP")}
-        ${o("fab fa-laravel","Laravel")}
-        ${o("fab fa-react","React JS")}
-        ${o("fab fa-python","Python")}
-        ${o("fas fa-database","MySQL")}
-        ${o("fas fa-database","PostgreSQL")}
-        ${o("fab fa-figma","Figma")}
+        ${r("fab fa-bootstrap","Bootstrap")}
+        ${r("fab fa-php","PHP")}
+        ${r("fab fa-laravel","Laravel")}
+        ${r("fab fa-react","React JS")}
+        ${r("fab fa-python","Python")}
+        ${r("fas fa-database","MySQL")}
+        ${r("fas fa-database","PostgreSQL")}
+        ${r("fab fa-figma","Figma")}
       </div>
     </section>
-  `}function o(e,s,n=!1){return`
+  `}function r(e,s,n=!1){return`
     <div class="flex items-center space-x-4 md:flex-col md:space-x-0 md:space-y-2 bg-transparent md:bg-purple-50 md:p-4 rounded-xl shadow-none md:shadow hover:md:shadow-lg transition duration-300">
         ${n?e:`<i class="${e} text-2xl md:text-4xl text-purple-600"></i>`}
         <span class="text-base md:text-sm font-medium text-gray-800">${s}</span>
@@ -290,7 +290,7 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
             </div>
           </div>
 
-          <img src="/project/view.png" alt="Cuplikan Project" class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0" width="2432" height="1442" />
+          <img src="/myPortfolio/project/view.png" alt="Cuplikan Project" class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0" width="2432" height="1442" />
         </div>
 
         <div class="text-center mt-12">
@@ -328,8 +328,8 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
         <div class="bg-purple-50 rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden">
           <div class="relative w-full aspect-[16/9] overflow-hidden">
             <div class="flex transition-transform duration-500 ease-in-out w-full h-full" id="slider-1">
-              <img src="/project/suplierProject1.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 1">
-              <img src="/project/suplierProject2.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 2">
+              <img src="/myPortfolio/project/suplierProject1.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 1">
+              <img src="/myPortfolio/project/suplierProject2.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 2">
             </div>
             <button onclick="prevSlide('slider-1')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 p-1 rounded-full hover:bg-opacity-100">◀</button>
             <button onclick="nextSlide('slider-1')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 p-1 rounded-full hover:bg-opacity-100">▶</button>
@@ -348,8 +348,8 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
         <div class="bg-purple-50 rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden">
           <div class="relative w-full aspect-[16/9] overflow-hidden">
             <div class="flex transition-transform duration-500 ease-in-out w-full h-full" id="slider-2">
-              <img src="/project/rekapProject1.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 1">
-              <img src="/project/rekapProject2.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 2">
+              <img src="/myPortfolio/project/rekapProject1.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 1">
+              <img src="/myPortfolio/project/rekapProject2.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 2">
             </div>
             <button onclick="prevSlide('slider-2')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 p-1 rounded-full hover:bg-opacity-100">◀</button>
             <button onclick="nextSlide('slider-2')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 p-1 rounded-full hover:bg-opacity-100">▶</button>
@@ -366,7 +366,7 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
         </div>
 
         <div class="bg-purple-50 rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden">
-          <img src="/project/retailManagemetSystem.png" alt="Project 2" class="w-full aspect-[16/9] object-cover">
+          <img src="/myPortfolio/project/retailManagemetSystem.png" alt="Project 2" class="w-full aspect-[16/9] object-cover">
           <div class="p-6">
             <h3 class="text-lg font-semibold text-purple-800 mb-2">Sistem Retail Management</h3>
             <div class="relative">
@@ -381,8 +381,8 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
         <div class="bg-purple-50 rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden">
           <div class="relative w-full aspect-[16/9] overflow-hidden">
             <div class="flex transition-transform duration-500 ease-in-out w-full h-full" id="slider-3">
-              <img src="/project/ecommerce1.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 1">
-              <img src="/project/ecommerce2.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 2">
+              <img src="/myPortfolio/project/ecommerce1.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 1">
+              <img src="/myPortfolio/project/ecommerce2.png" class="w-full h-full flex-shrink-0 object-cover" alt="Project 2">
             </div>
             <button onclick="prevSlide('slider-3')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 p-1 rounded-full hover:bg-opacity-100">◀</button>
             <button onclick="nextSlide('slider-3')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 p-1 rounded-full hover:bg-opacity-100">▶</button>
@@ -404,7 +404,7 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
         </div>
 
         <div class="bg-purple-50 rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden">
-          <img src="/project/scraping.png" alt="Project 3" class="w-full aspect-[16/9] object-cover">
+          <img src="/myPortfolio/project/scraping.png" alt="Project 3" class="w-full aspect-[16/9] object-cover">
           <div class="p-6">
             <h3 class="text-lg font-semibold text-purple-800 mb-2">Scraping & Automation Bot</h3>
             <div class="relative">
@@ -416,7 +416,7 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
         </div>
 
         <div class="bg-purple-50 rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden">
-          <img src="/project/ramadan.png" alt="Project 3" class="w-full aspect-[16/9] object-cover">
+          <img src="/myPortfolio/project/ramadan.png" alt="Project 3" class="w-full aspect-[16/9] object-cover">
           <div class="p-6">
             <h3 class="text-lg font-semibold text-purple-800 mb-2">Countdown Waktu Salat & Quest Ramadan</h3>
             <div class="relative">
@@ -524,4 +524,4 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
         </div>
       </div>
     </section>
-  `}const V={apiKey:"AIzaSyA2NgjgwjBogA5Capz7d5_PPsT3tkj9oTk",authDomain:"portfoliodimasforum.firebaseapp.com",projectId:"portfoliodimasforum",storageBucket:"portfoliodimasforum.appspot.com",messagingSenderId:"365108246554",appId:"1:365108246554:web:16f36847aaf7d0610eb9a3",measurementId:"G-NWM4FNMMK4"},k=P(V),h=L(k),m=A(k);function G(){const e=document.getElementById("chat-box"),s=document.getElementById("chat-form"),n=document.getElementById("message");M(h,a=>{if(!a)return window.location.hash="#/login";const t=C(m,"chats",a.uid),i=p(m,`chats/${a.uid}/messages`),l=b(i,v("timestamp","asc"));g(l,r=>{e.innerHTML="",r.forEach(d=>{const c=d.data();e.innerHTML+=`<div><strong>${c.sender==="admin"?"👨‍💼 Admin":"👤 You"}</strong>: ${c.text}</div>`,e.scrollTop=e.scrollHeight})}),s.addEventListener("submit",async r=>{r.preventDefault(),n.value.trim()&&(await I(t,{userEmail:a.email,createdAt:f()},{merge:!0}),await y(i,{text:n.value.trim(),sender:"user",timestamp:f()}),n.value="")})})}function W(){const e=document.getElementById("login-form"),s=document.getElementById("register-form"),n=document.getElementById("login-error"),a=document.getElementById("register-error");e&&e.addEventListener("submit",async t=>{t.preventDefault();const i=e.email.value.trim(),l=e.password.value.trim();try{await B(h,i,l),window.location.hash="#/forums"}catch{n.classList.remove("hidden")}}),s&&s.addEventListener("submit",async t=>{t.preventDefault();const i=s.email.value.trim(),l=s.password.value.trim(),r=s.confirm.value.trim();if(l.length<6){a.textContent="Password minimal 6 karakter",a.classList.remove("hidden");return}if(l!==r){a.textContent="Password tidak cocok",a.classList.remove("hidden");return}try{await E(h,i,l),window.location.hash="#/forums"}catch{a.textContent="Registrasi gagal. Gunakan email yang valid.",a.classList.remove("hidden")}})}function Z(){const e=document.getElementById("users"),s=document.getElementById("chat-box-admin"),n=document.getElementById("admin-chat-form"),a=document.getElementById("admin-message");let t=null;const i=p(m,"chats");g(i,r=>{e.innerHTML="",r.forEach(d=>{const c=d.data(),u=document.createElement("div");u.className="p-2 bg-white border rounded hover:bg-purple-100 cursor-pointer",u.textContent=c.userEmail,u.onclick=()=>l(d.id),e.appendChild(u)})});function l(r){t=r;const d=p(m,`chats/${r}/messages`),c=b(d,v("timestamp","asc"));g(c,u=>{s.innerHTML="",u.forEach(S=>{const x=S.data(),j=x.sender==="admin"?"👨‍💼 Admin":"👤 User";s.innerHTML+=`<div class="mb-2"><strong>${j}:</strong> ${x.text}</div>`}),s.scrollTop=s.scrollHeight})}n.addEventListener("submit",async r=>{if(r.preventDefault(),!t||!a.value.trim())return;const d=p(m,`chats/${t}/messages`);await y(d,{text:a.value.trim(),sender:"admin",timestamp:f()}),a.value=""})}const Q={"/":J,"/portfolio":F,"/portfolio/project":O,"/forums":z,"/login":N,"/admin":U};function w(){const e=document.getElementById("app"),s=location.hash.slice(1)||"/",n=Q[s]||(()=>"<h1>404 Page Not Found!</h1>"),a=s==="/"?n():$(n());e.innerHTML=a,s==="/forums"&&G(),s==="/login"&&W(),s==="/admin"&&Z()}window.addEventListener("DOMContentLoaded",w);window.addEventListener("hashchange",w);
+  `}const V={apiKey:"AIzaSyA2NgjgwjBogA5Capz7d5_PPsT3tkj9oTk",authDomain:"portfoliodimasforum.firebaseapp.com",projectId:"portfoliodimasforum",storageBucket:"portfoliodimasforum.appspot.com",messagingSenderId:"365108246554",appId:"1:365108246554:web:16f36847aaf7d0610eb9a3",measurementId:"G-NWM4FNMMK4"},k=P(V),h=L(k),m=A(k);function G(){const e=document.getElementById("chat-box"),s=document.getElementById("chat-form"),n=document.getElementById("message");M(h,a=>{if(!a)return window.location.hash="#/login";const t=$(m,"chats",a.uid),i=p(m,`chats/${a.uid}/messages`),l=b(i,v("timestamp","asc"));g(l,o=>{e.innerHTML="",o.forEach(d=>{const c=d.data();e.innerHTML+=`<div><strong>${c.sender==="admin"?"👨‍💼 Admin":"👤 You"}</strong>: ${c.text}</div>`,e.scrollTop=e.scrollHeight})}),s.addEventListener("submit",async o=>{o.preventDefault(),n.value.trim()&&(await C(t,{userEmail:a.email,createdAt:f()},{merge:!0}),await y(i,{text:n.value.trim(),sender:"user",timestamp:f()}),n.value="")})})}function W(){const e=document.getElementById("login-form"),s=document.getElementById("register-form"),n=document.getElementById("login-error"),a=document.getElementById("register-error");e&&e.addEventListener("submit",async t=>{t.preventDefault();const i=e.email.value.trim(),l=e.password.value.trim();try{await B(h,i,l),window.location.hash="#/forums"}catch{n.classList.remove("hidden")}}),s&&s.addEventListener("submit",async t=>{t.preventDefault();const i=s.email.value.trim(),l=s.password.value.trim(),o=s.confirm.value.trim();if(l.length<6){a.textContent="Password minimal 6 karakter",a.classList.remove("hidden");return}if(l!==o){a.textContent="Password tidak cocok",a.classList.remove("hidden");return}try{await E(h,i,l),window.location.hash="#/forums"}catch{a.textContent="Registrasi gagal. Gunakan email yang valid.",a.classList.remove("hidden")}})}function Z(){const e=document.getElementById("users"),s=document.getElementById("chat-box-admin"),n=document.getElementById("admin-chat-form"),a=document.getElementById("admin-message");let t=null;const i=p(m,"chats");g(i,o=>{e.innerHTML="",o.forEach(d=>{const c=d.data(),u=document.createElement("div");u.className="p-2 bg-white border rounded hover:bg-purple-100 cursor-pointer",u.textContent=c.userEmail,u.onclick=()=>l(d.id),e.appendChild(u)})});function l(o){t=o;const d=p(m,`chats/${o}/messages`),c=b(d,v("timestamp","asc"));g(c,u=>{s.innerHTML="",u.forEach(S=>{const x=S.data(),j=x.sender==="admin"?"👨‍💼 Admin":"👤 User";s.innerHTML+=`<div class="mb-2"><strong>${j}:</strong> ${x.text}</div>`}),s.scrollTop=s.scrollHeight})}n.addEventListener("submit",async o=>{if(o.preventDefault(),!t||!a.value.trim())return;const d=p(m,`chats/${t}/messages`);await y(d,{text:a.value.trim(),sender:"admin",timestamp:f()}),a.value=""})}const Q={"/":J,"/portfolio":F,"/portfolio/project":O,"/forums":z,"/login":N,"/admin":U};function w(){const e=document.getElementById("app"),s=location.hash.slice(1)||"/",n=Q[s]||(()=>"<h1>404 Page Not Found!</h1>"),a=s==="/"?n():H(n());e.innerHTML=a,s==="/forums"&&G(),s==="/login"&&W(),s==="/admin"&&Z()}window.addEventListener("DOMContentLoaded",w);window.addEventListener("hashchange",w);
