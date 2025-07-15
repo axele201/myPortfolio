@@ -302,8 +302,10 @@ import{initializeApp as P}from"https://www.gstatic.com/firebasejs/11.10.0/fireba
         ${R()}
         ${K()}
         ${q()}
-    `}function J(){return setTimeout(()=>{document.body.addEventListener("click",()=>{location.hash="#/portfolio"},{once:!0});const e=document.getElementById("lottie-wave");e&&lottie.loadAnimation({container:e,renderer:"svg",loop:!0,autoplay:!0,path:"/myPortfolio/animation.json"})},0),`
-    <section class="min-h-screen flex flex-col justify-center items-center bg-purple-50 text-center px-4 cursor-pointer">
+    `}function J(){return setTimeout(()=>{document.body.addEventListener("click",()=>{const s=document.getElementById("welcome-section");s&&(s.classList.add("opacity-0","transition-opacity","duration-500"),setTimeout(()=>{location.hash="#/portfolio"},500))},{once:!0});const e=document.getElementById("lottie-wave");e&&lottie.loadAnimation({container:e,renderer:"svg",loop:!0,autoplay:!0,path:"/myPortfolio/animation.json"})},0),`
+    <section id="welcome-section"
+      class="min-h-screen flex flex-col justify-center items-center bg-purple-50 text-center px-4 cursor-pointer transition-opacity duration-500">
+      
       <div id="lottie-wave" class="w-40 h-40 mb-4"></div>
 
       <div class="flex items-center justify-center space-x-2 mb-4">
